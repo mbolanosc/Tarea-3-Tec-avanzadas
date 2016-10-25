@@ -59,3 +59,25 @@ $color_white: #f7f2e9;
     margin-top: 1em;
     float: left;
 };
+
+/*grid system*/
+@for $y from 1 through 3 {
+    .box1:nth-child(#{$y}) {
+        background:$color_flush_orange;
+    };
+};
+@for $i from 1 through 3 {
+    .box2:nth-child(#{$i}) {
+        background:$color_cape;
+    };
+};
+@for $z from 1 through 3 {
+    .box3:nth-child(#{$z}) {
+        background:$color_gravel;
+    };
+};
+@for $q from 1 through 2 {
+    .box4:nth-child(#{$q}) {
+        background:$color_pearl;
+    };
+};
