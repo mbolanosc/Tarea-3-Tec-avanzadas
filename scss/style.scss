@@ -24,7 +24,14 @@ $color_flush_orange: #ff8400;
 $color_cape: #3b4044;
 $color_pearl: #e6e1d8;
 $color_white: #f7f2e9;
+$p_size: 20px;
 
+.first-container {
+  p{
+    font-size: $p_size;
+    text-align: center;
+  }
+}
 /*general*/
 .header {
     background-color: $color_gravel;
@@ -47,7 +54,17 @@ $color_white: #f7f2e9;
     margin-bottom: 0.75em;
     /*12/16*/
 };
-
+/*border mix*/
+@mixin solid-border-fr($px) {
+  border-style: solid;
+  border-width: $px;
+  border-color: $color_flush_orange;
+}
+@mixin solid-border-second($px) {
+  border-style: solid;
+  border-width: $px;
+  border-color: $color_gravel;
+}
 /*all boxes*/
 .box1,
 .box2,
@@ -81,3 +98,25 @@ $color_white: #f7f2e9;
         background:$color_pearl;
     };
 };
+
+/*grid details*/
+.first-container #col-one{
+    width: 16%;
+};
+.second-container #col-two{
+	width: 32%;
+}
+.third-container #col-th {
+	width: 24%;
+}
+.fourth-container #col-f {
+	width: 46.2%;
+	padding: 0.900%;
+	height: 3em;
+}
+.solid-border-color-1 {
+  @include solid-border-fr(0.6em);
+}
+.solid-border-color-2{
+  @include solid-border-second(0.6em);
+}
